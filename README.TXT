@@ -7,16 +7,18 @@ Execute the JAVA source files in the following order. Make sure the input and ou
 2. topdown16.java
 3. sortbylength2.java
 4. cleanoutput5.java
-5. clusterer5.java
+5. clusterer5nomap.java
 
 
 Data Preperation
 ================
 
-Input data file looks like a matrix of data points as rows and features as columns. Each entry represents the frequency of that feature in the data point. A sample "dataset_NG.txt" is placed in the NG_Data folder.
+Input data file looks like a matrix of data points as rows and features as columns. Each entry represents the frequency of that feature in the data point. The data matrix for CLASSIC3 data set is present in "dataset_NG.txt" in the NG_Data folder.
 
 
 Reading the Output
 ==================
 
-Output file contains entries that look like "1 21 27 666 932 : 4". Number on the left side of the ":" sign represent the dimension ID and the number on the right side of ":" represent the frequency of the dimensions considered together. In this case, features "1 21 27 666 932" occurred 4 times. A sample output file "maximal_data_NG.txt" is provided in NG_Data folder. 
+Output file is "result.txt" in the root folder. It contains entries like "671 5260 7824 : 462 1458 2820 3685" here elements before the ":" represent the group for features ids and elements after ":" refer to the group of document ids which contain these features.
+Calculation of accuracy is done by the python code accuracy.py present in the python folder.
+It uses col.txt and row.txt which contain the mapping between features & feature id and document id and document types.
